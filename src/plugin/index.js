@@ -1,5 +1,6 @@
-// 测试数据
-import '@/mock'
+// 测试数据；发布的时候不应该引入mock
+// import '@/mock'
+if (process.env.NODE_ENV !== 'production') require('@/mock')
 
 export default {
   install (Vue) {
