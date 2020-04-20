@@ -7,16 +7,20 @@
 
 <script>
 import ComB from './com-b'
+
 export default {
   name: 'comA',
+
   components: {
     ComB
   },
+
   data () {
     return {
       message: 'hello comA'
     }
   },
+  
   created () {
     this.$on('on-message', rs => {
       this.message = rs

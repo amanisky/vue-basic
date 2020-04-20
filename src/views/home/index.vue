@@ -9,12 +9,16 @@
 <script>
 import Emitter from '../../mixins/emitter.js'
 import ComA from './components/com-a'
+
 export default {
   name: 'home',
+
   mixins: [ Emitter ],
+
   components: {
     ComA
   },
+
   data () {
     return {
       message: 'hello home'
@@ -25,6 +29,7 @@ export default {
       this.message = rs
     })
   },
+  
   methods: {
     handleClick () {
       this.broadcast('comA', 'on-message', '123')

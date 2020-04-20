@@ -10,17 +10,21 @@ import Emitter from '../../../mixins/emitter.js'
 
 export default {
   name: 'comB',
+
   mixins: [ Emitter ],
+
   data () {
     return {
       message: 'hello ComB'
     }
   },
+
   created () {
     this.$on('on-message', rs => {
       this.message = rs
     })
   },
+  
   methods: {
     clickHandle () {
       this.dispatch('home', 'pass-data', 'xyz')
